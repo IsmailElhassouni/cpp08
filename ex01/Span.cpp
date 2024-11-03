@@ -22,7 +22,14 @@ unsigned int Span::shortestSpan()
     if (v.size() < 2)
         throw std::runtime_error("Not enough elements");
     unsigned int min = longestSpan();
-    
+    for(vector<unsigned int>::iterator it = v.begin(); it != v.end(); it++)
+    {
+        for(vector<unsigned int>::iterator ft_it = v.begin(); ft_it != v.end(); ft_it++)
+        {
+            if(ft_it != it && (*ft_it - *it) < min)
+                min = *ft_it - *it;
+        }
+    }
     return min;
 
 }
