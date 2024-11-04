@@ -2,15 +2,17 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-template <typename T, class f = std::deque<T> >
-class MutantStack: public std::stack<T, f>
+template <typename T, class Container = std::deque<T> >
+class MutantStack: public std::stack<T, Container>
 {
-    private:
-        f s;
     public:
-        typedef typename f:iterator it;
-        it begin()
+        typedef typename Container::iterator iterator;
+        iterator begin()
         {
-            return  c.begin();
+            return  this->c.begin();
         }
-}
+        iterator end()
+        {
+            return this->c.end();
+        }
+};
