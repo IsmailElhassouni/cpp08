@@ -13,14 +13,14 @@ int main()
     d.push_back(6);
     try
     {
-        std::cout << easyfind(d, 0) << std::endl;
-        std::cout << easyfind(d, 4) << std::endl;
-        std::cout << easyfind(v, 2) << std::endl;
-        std::cout << easyfind(v, 1) << std::endl;
+        std::cout << easyfind(d, 0) << '\n';
+        std::cout << easyfind(d, 4) << '\n';
+        std::cout << easyfind(v, 2) << '\n';
+        std::cout << easyfind(v, 1) << '\n';
     }
     catch (std::exception &e)
     {
-        std::cout << e.what() << std::endl;
+        std::cout << e.what() << '\n';
     }
     return 0;
 }
