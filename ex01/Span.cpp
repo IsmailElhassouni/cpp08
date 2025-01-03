@@ -17,6 +17,12 @@ void Span::addNumber(unsigned int n)
     v.push_back(n);
     check++;
 }
+void Span::addNumber(vector<unsigned int>::iterator begin, vector<unsigned int>::iterator end)
+{
+    if(v.size() + std::distance(begin, end) > N)
+        throw std::runtime_error("Span is full");
+    v.insert(v.end(), begin, end);
+}
 unsigned int Span::shortestSpan()
 {
     if (v.size() < 2)

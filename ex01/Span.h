@@ -16,6 +16,7 @@ public:
     Span &operator=(Span const &other);
     ~Span();
     void addNumber(unsigned int N);
+    void addNumber(vector<unsigned int>::iterator begin, vector<unsigned int>::iterator end);
     unsigned int shortestSpan();
     unsigned int longestSpan();
 };
